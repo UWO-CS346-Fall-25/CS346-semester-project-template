@@ -24,4 +24,6 @@ const router = express.Router();
 // Define routes
 // router.get('/', indexController.getHome);
 
+// dummy comment
+
 module.exports = router;
