@@ -126,6 +126,7 @@ function initInteractiveElements() {
  * @param {object} options - Request options (method, headers, body, etc.)
  * @returns {Promise<any>} - Response data
  */
+/* eslint-disable no-unused-vars */
 async function makeRequest(url, options = {}) {
   try {
     const response = await fetch(url, {
@@ -152,6 +153,7 @@ async function makeRequest(url, options = {}) {
  * @param {string} message - Message to display
  * @param {string} type - Type of message (success, error, info, warning)
  */
+/* eslint-disable no-unused-vars */
 function showNotification(message, type = 'info') {
   // Create notification element
   const notification = document.createElement('div');
