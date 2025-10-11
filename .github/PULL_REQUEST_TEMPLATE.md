@@ -9,7 +9,6 @@
 - **Week/Iteration:** <!-- e.g., Week 9 -->
 - **Topics covered:** <!-- e.g., Express routing, EJS forms -->
 - **Resources:** <!-- e.g., Textbook section 5.2, MDN docs on fetch, website x -->
-- **Issue / User Story link (if any):** <!-- optional -->
 
 ---
 
