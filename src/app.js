@@ -73,6 +73,10 @@ app.use((req, res, next) => {
 // const indexRouter = require('./routes/index');
 // app.use('/', indexRouter);
 
+// Feedback routes
+const feedbackRouter = require('./routes/feedback');
+app.use('/feedback', feedbackRouter);
+
 // Placeholder home route
 app.get('/', csrfProtection, (req, res) => {
   res.render('index', {

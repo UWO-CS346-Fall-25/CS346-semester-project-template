@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Feedback - CS346 Project</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="container">
+        <a href="/" class="logo">CS346 Project</a>
+        <ul class="nav-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/feedback">Feedback</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Feedback</h1>
+    
+    <form method="post" action="/feedback">
+      <input name="name" placeholder="Your name" required />
+      <textarea name="message" placeholder="Say hi…" required></textarea>
+      <button type="submit">Post</button>
+    </form>
+    
+    <h2>Recent Feedback</h2>
+    <ul>
+      <% (feedback || []).forEach(f => { %>
+        <li>
+          <strong><%= f.name %></strong>: <%= f.message %> 
+          <em>(<%= new Date(f.created_at).toLocaleString() %>)</em>
+        </li>
+      <% }) %>
+    </ul>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2024 CS346 Project. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+</body>
+</html>
